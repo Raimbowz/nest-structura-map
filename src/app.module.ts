@@ -12,6 +12,8 @@ import { UserController } from './controllers/user.controller';
 import { UserService } from './services/user.service';
 import { ProjectController } from './controllers/project.controller';
 import { ProjectService } from './services/project.service';
+import { ReportController } from './controllers/report.controller';
+import { ReportService } from './services/report.service';
 
 @Module({
   imports: [
@@ -27,7 +29,7 @@ import { ProjectService } from './services/project.service';
     }),
     TypeOrmModule.forFeature([User, Company, Project, Equipment, Report, Log, Note]),
   ],
-  controllers: [UserController, ProjectController],
-  providers: [UserService, ProjectService],
+  controllers: [UserController, ProjectController, ReportController],
+  providers: [UserService, ProjectService, ReportService],
 })
 export class AppModule {}
