@@ -10,6 +10,8 @@ import { Log } from './entities/log.entity';
 import { Note } from './entities/note.entity';
 import { UserController } from './controllers/user.controller';
 import { UserService } from './services/user.service';
+import { ProjectController } from './controllers/project.controller';
+import { ProjectService } from './services/project.service';
 
 @Module({
   imports: [
@@ -25,7 +27,7 @@ import { UserService } from './services/user.service';
     }),
     TypeOrmModule.forFeature([User, Company, Project, Equipment, Report, Log, Note]),
   ],
-  controllers: [UserController],
-  providers: [UserService],
+  controllers: [UserController, ProjectController],
+  providers: [UserService, ProjectService],
 })
 export class AppModule {}
