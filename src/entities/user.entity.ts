@@ -4,7 +4,6 @@ import { Log } from './log.entity';
 import { Note } from './note.entity';
 import { Company } from './company.entity';
 import { Project } from './project.entity';
-import { Task } from './task.entity';
 
 @Entity('users')
 export class User {
